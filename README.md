@@ -10,7 +10,7 @@ O processo de  assinatura é um método de autenticação de documentos e mensag
 
 
 ### 1.1 Objetivos
-Para demonstrar as propriedades conceituais e práticas deste recurso, a AES será implementada com a opção de cifragem em formato ECB e CTR. Espera-se que o produto final seja capaz de:
+Este relatório descreve a implementação de um gerador e verificador de assinaturas RSA em arquivos. O programa implementa as seguintes funcionalidades:
 
 - Geração de chaves RSA
 
@@ -66,18 +66,18 @@ A AES será implementada no tamanho de 128 bits para bloco e chave. Um processo 
 
 ### 3. Resultados
 
-![](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/1.PNG)
-
-#### 3.2 Cifragem/Decifragem
+![](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/1.png)
 
 
-![Geração de chaves](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/2.PNG)
 
 
-![Cifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/3.PNG)
+![Geração de chaves](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/2.png)
 
 
-![Produtos do processo de cifragem ](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/4.PNG)
+![Cifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/3.png)
+
+
+![Produtos do processo de cifragem ](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/2.png)
 
 
 

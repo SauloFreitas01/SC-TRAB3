@@ -77,6 +77,6 @@ A AES será implementada no tamanho de 128 bits para bloco e chave. Um processo 
 ![Geração de assinatura](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/3.png?token=GHSAT0AAAAAACLHW6Q3HWBQDGN6SXYE53G2ZLQAWWA)
 
 
-![Decifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/4.PNG)
+![Decifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/4.png?token=GHSAT0AAAAAACLHW6Q2TRZZKKJJFRMLDWTQZLQAZ5Q)
 
 

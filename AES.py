@@ -236,11 +236,7 @@ def cipher(block, keys):
         state = add_round_key(state, keys[round])
     return state
 
-def ecb(msg, chave, num_rounds):
-    keys = expand_key(chave)
-    blocks = convert(msg, 16)
-    ciphered_text = [cipher(block, keys[:num_rounds]) for block in blocks]
-    return b''.join(ciphered_text)
+
 
 def ctr(msg, chave, iv):   
     """
@@ -262,50 +258,3 @@ def ctr(msg, chave, iv):
 
 
 
-
-def encrypt_image_with_ctr(image_file, key):
-    # Read the image file as binary data
-    num_rounds=[1,5,9,13]
-    with open(image_file, 'rb') as f:
-        image_data = f.read()
-
-    # Generate a random initialization vector (IV)
-    iv = os.urandom(16)
-
-    # Encrypt the image data using CTR mode for the specified number of rounds
-    encrypted_image_data = image_data
-    for _ in num_rounds:
-        encrypted_image_data = ctr(encrypted_image_data, key, iv)
-
-        # Save the encrypted image data to a new file for each round
-        encrypted_image_file = f"{image_file}.encrypted_round_{_}"
-        with open(encrypted_image_file, 'wb') as f:
-            f.write(encrypted_image_data)
-        
-        print(f"Round {_}: Image encrypted and saved as {encrypted_image_file}")
-
-    return encrypted_image_data
-
-def decrypt_image_with_ctr(encrypted_image_file, key):
-    # Read the encrypted image file as binary data
-    with open(encrypted_image_file, 'rb') as f:
-        encrypted_image_data = f.read()
-
-    # Generate the initialization vector (IV) from the encrypted image data
-    iv = encrypted_image_data[:16]
-
-    # Decrypt the image data using CTR mode
-    decrypted_image_data = ctr(encrypted_image_data[16:], key, iv)
-
-    # Create a new file path for the decrypted image file
-    decrypted_image_file = str(encrypted_image_file) + '.decrypted'
-
-    # Save the decrypted image data to a new file
-    with open(decrypted_image_file, 'wb') as f:
-        f.write(decrypted_image_data)
-
-    return decrypted_image_file
-
-def render_decrypted_image(decrypted_image_file):
-    decrypted_image = Image.open(decrypted_image_file)
-    decrypted_image.show()

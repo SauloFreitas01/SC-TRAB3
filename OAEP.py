@@ -22,7 +22,7 @@ def cypher_oaep(n, session_key):
 
     data_block = lable_hash + padding_string + b'\x01' + session_key
 
-    seed = urandom(hash_len)
+    seed = session_key[:16]
 
     masked_data_block = mask(data_block, seed, k - hash_len - 1)
     masked_seed = mask(seed, masked_data_block, hash_len)

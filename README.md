@@ -66,23 +66,22 @@ A AES será implementada no tamanho de 128 bits para bloco e chave. Um processo 
 
 ### 3. Resultados
 
-![](https://raw.githubusercontent.com/SauloFreitas01/SC-Trab2/main/imgs/1.PNG)
+![](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/1.PNG)
 
 #### 3.2 Cifragem/Decifragem
 
 
-![Geração de chaves](https://raw.githubusercontent.com/SauloFreitas01/SC-Trab2/main/imgs/2.PNG)
+![Geração de chaves](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/2.PNG)
 
 
-![Cifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-Trab2/main/imgs/3.PNG)
+![Cifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/3.PNG)
 
 
-![Produtos do processo de cifragem ](https://raw.githubusercontent.com/SauloFreitas01/SC-Trab2/main/imgs/4.PNG)
+![Produtos do processo de cifragem ](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/4.PNG)
 
 
 
 
-![Decifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-Trab2/main/imgs/5.PNG)
+![Decifragem do arquivo](https://raw.githubusercontent.com/SauloFreitas01/SC-TRAB3/main/imgs/4.PNG)
 
 
-![Cifragem de Imagem em modo CTR ](https://raw.githubusercontent.com/SauloFreitas01/SC-Trab2/main/imgs/6.PNG)

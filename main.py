@@ -44,7 +44,7 @@ session_key = key + iv
 session_key_cipher = RSA.cypher(public_key, session_key)
 session_key_cipher = base64.b64encode(session_key_cipher).decode("ascii")
 
-arq = input('\nNOME DO ARQUIVO A SER CIFRADO: ')
+arq = input(f'\n{Fore.BLUE}NOME DO ARQUIVO A SER CIFRADO:{Style.RESET_ALL} ')
 file = Path(__file__).absolute().parent / arq
 with open(file, "rb") as f:
     msg = f.read()
@@ -56,11 +56,11 @@ with open(file, "wb") as f:
 signature = RSA.sign(private_key, msg)
 signature = base64.b64encode(signature).decode("ascii")
 
-print(f'\nMENSAGEM: {msg}\n')
-print(f'\nMENSAGEM CIFRADA:{ciphered_msg}\n')
-print(f'\nCHAVE DA SESSÃO:{session_key}\n')
-print(f'\nCHAVE DA SESSÃO CIFRADA:{session_key_cipher}\n')
-print(f'\nASSINATURA:{signature}\n')
+print(f'\n{Fore.YELLOW}MENSAGEM:{Style.RESET_ALL} {msg}\n')
+print(f'\n{Fore.YELLOW}MENSAGEM CIFRADA:{Style.RESET_ALL}{ciphered_msg}\n')
+print(f'\n{Fore.YELLOW}CHAVE DA SESSÃO:{Style.RESET_ALL}{session_key}\n')
+print(f'\n{Fore.YELLOW}CHAVE DA SESSÃO CIFRADA:{Style.RESET_ALL}{session_key_cipher}\n')
+print(f'\n{Fore.YELLOW}ASSINATURA:{Style.RESET_ALL}{signature}\n')
 
 
 init_keys = input('Deseja decifrar? (S/N) ')
